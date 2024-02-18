@@ -1,4 +1,17 @@
-﻿using System.IO;
+﻿// ***********************************************************************
+// Assembly         : IconMaker
+// Author           : MattEgen
+// Created          : 02-09-2024
+//
+// Last Modified By : MattEgen
+// Last Modified On : 02-11-2024
+// ***********************************************************************
+// <copyright file="Program.cs" company="Matt Egen">
+//     Copyright (c) . All rights reserved.
+// </copyright>
+// <summary></summary>
+// ***********************************************************************
+using System.IO;
 
 namespace IconMaker
 {
@@ -21,8 +34,10 @@ public class IconCreator
     {
         public void CreateIcon(string filePath, string pngFilePath)
         {
+            // get the PNG file data
             byte[] pngData = File.ReadAllBytes(pngFilePath);
 
+            // write the ICO file
             using (var stream = new FileStream(filePath, FileMode.Create))
             {
                 using (var writer = new BinaryWriter(stream))
