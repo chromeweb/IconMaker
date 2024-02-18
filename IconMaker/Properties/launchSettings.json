@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "IconMaker": {
+      "commandName": "Project",
+      "commandLineArgs": "c:\\temp\\icontest.png c:\\temp\\icontest.ico"
+    }
+  }
+}
